@@ -18,6 +18,23 @@ const ROADMAP = [
 const ROADMAP_TOTAL = ROADMAP.reduce((n, g) => n + g.items.length, 0); // 35
 
 const $ = (id) => document.getElementById(id);
+
+// Live UTC clock in the hero: full date + time, ticking every second.
+// Always UTC (getUTC*), never the browser's local time.
+const DAYS = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
+const MONTHS = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'];
+const pad = (n) => String(n).padStart(2, '0');
+function tickClock() {
+  const now = new Date();
+  const dateEl = $('utc-date');
+  const timeEl = $('utc-time');
+  if (!dateEl || !timeEl) return;
+  dateEl.textContent = `${DAYS[now.getUTCDay()]}, ${now.getUTCDate()} ${MONTHS[now.getUTCMonth()]} ${now.getUTCFullYear()}`;
+  timeEl.textContent = `${pad(now.getUTCHours())}:${pad(now.getUTCMinutes())}:${pad(now.getUTCSeconds())}`;
+}
+tickClock();
+setInterval(tickClock, 1000);
+
 const doc = await (await fetch('data/trophies.json')).json();
 const byName = new Map(doc.trophies.map((t) => [t.name, t.id]));
 
