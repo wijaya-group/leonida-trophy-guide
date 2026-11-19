@@ -1,0 +1,5 @@
+[
+  { "file": "1-checklist.jpg", "path": "/?spoilers=show&demo=1", "viewport": { "width": 1280, "height": 800 } },
+  { "file": "2-silver.jpg", "path": "/?grade=silver&spoilers=show", "viewport": { "width": 1280, "height": 800 } },
+  { "file": "3-bronze.jpg", "path": "/?grade=bronze&spoilers=show&scroll=1400", "viewport": { "width": 1280, "height": 800 } }
+]

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI Platinum Roadmap</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Leonida</p>
+    <h1>LEONIDA<br><span>TROPHY GUIDE</span></h1>
+    <p class="tagline">Every street is a stage. Every trophy, mapped.</p>
+    <div class="progress-wrap">
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <p id="progress-text">0 of 55 earned &middot; 0%</p>
+    </div>
+    <div class="chips">
+      <span class="chip platinum">1 Platinum</span>
+      <span class="chip gold">2 Gold</span>
+      <span class="chip silver">6 Silver</span>
+      <span class="chip bronze">46 Bronze</span>
+      <span class="chip time">~200 hours to Platinum</span>
+      <span class="chip offline">All offline &middot; no online trophies</span>
+    </div>
+    <nav class="tabs">
+      <a href="#guide">Trophy checklist</a>
+      <a href="#roadmap">Platinum roadmap</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="guide" class="guide">
+    <h2>Trophy checklist <span id="list-count"></span></h2>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="activity">Activities</option>
+          <option value="side">Side content</option>
+          <option value="collectible">Collectibles</option>
+          <option value="combat">Combat &amp; heists</option>
+          <option value="exploration">Exploration</option>
+          <option value="milestone">Milestones</option>
+        </select>
+      </label>
+      <label>Status
+        <select id="status">
+          <option value="all">All</option>
+          <option value="earned">Earned</option>
+          <option value="missing">Not earned</option>
+        </select>
+      </label>
+      <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+      <label class="check spoiler"><input id="spoilers" type="checkbox"> Show spoilers <span class="hint">(reveals 28 hidden / story trophies)</span></label>
+    </div>
+    <div class="actions">
+      <button id="export" type="button">Export progress</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+      <button id="reset" type="button">Reset progress</button>
+      <p class="save-note">Progress saves in this browser automatically.</p>
+    </div>
+    <p id="spoiler-note" class="spoiler-note">Spoilers hidden: 28 story &amp; hidden trophies are masked. Tick &ldquo;Show spoilers&rdquo; to reveal them.</p>
+    <div id="cards" class="cards"></div>
+    <p id="empty" class="empty" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section id="roadmap" class="roadmap">
+    <h2>Platinum Roadmap</h2>
+    <p class="lede">One playthrough, no mission replay, no New Game+. Cheats disable trophies and saving, so play it clean. Roughly 200 hours from first mission to platinum.</p>
+    <div class="phases">
+      <article class="phase">
+        <h3><span class="phase-num">1</span> Story first</h3>
+        <p class="phase-time">Chapters 1&ndash;4 + final mission &middot; ~40&ndash;60 h</p>
+        <p>Play the story straight through. Make a manual save at the start of every mission — there is no replay. Before finishing Chapter 1, meditate on Lucia&rsquo;s balcony at Jason&rsquo;s house (see the missable warning). Keep a recent save before the Race Against Yago sequence in Chapter 3: it is time-sensitive.</p>
+      </article>
+      <article class="phase">
+        <h3><span class="phase-num">2</span> Strangers &amp; side strands</h3>
+        <p class="phase-time">8 stranger strands + 5 character finales &middot; ~25 h</p>
+        <p>Clear every &ldquo;?&rdquo; on the map. Stranger strands and the Andy, Kenton, Billy, Randy and Tyrone finales unlock as the story progresses — sweep them between chapters instead of leaving them all for the end.</p>
+      </article>
+      <article class="phase">
+        <h3><span class="phase-num">3</span> Activities &amp; combat</h3>
+        <p class="phase-time">Shooting range, races, stunts, heists &middot; ~50 h</p>
+        <p>The grind lives here: gold all 42 Shooting Range challenges, 250 stunts, drone races at all 14 locations, 20 race wins, 5 bank vaults, one illegal operation per gang. Do the fun ones first; save the pure grinds for last.</p>
+      </article>
+      <article class="phase">
+        <h3><span class="phase-num">4</span> Collectibles &amp; cleanup</h3>
+        <p class="phase-time">Cards, WAiNK, vehicles, exploration &middot; ~60 h</p>
+        <p>Cards (3 sets), WAiNK at 100 locations, 100 vehicles discovered, 8 garages, all 52 areas of Leonida. When the last item ticks off, <strong>A Long Road</strong> pops — and the platinum follows.</p>
+      </article>
+    </div>
+
+    <div class="longroad">
+      <h3>A Long Road — the 100% checklist <span id="roadmap-count"></span></h3>
+      <p class="lede">The in-game completion tracker counts 35 tasks. Tick them off here as you go; the list is built from the official trophy requirements, and the final count follows the tracker in the game.</p>
+      <ul id="roadmap-list" class="roadmap-list"></ul>
+    </div>
+  </section>
+
+  <footer id="sources">
+    <h2>Sources &amp; notes</h2>
+    <p>Official trophy names, descriptions and grades: <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase — Grand Theft Auto VI trophies</a>. Methods, missable flags and the 100% breakdown draw on cryptogames.gg, keengamer.com and outputlag.com, with the A Long Road estimate via PowerPyx / GTABase. All guide text is written in our own words; nothing is copied from another guide.</p>
+    <p>Heads-up: the Positive Mental Attitude missable flag is <strong>unconfirmed</strong> — Lucia&rsquo;s Chapter 1 balcony meditation may count and may disappear after Chapter 1. We flag it as potentially missable so you can play it safe, not as a proven fact.</p>
+    <p class="fine">Unofficial fan guide. Not affiliated with Rockstar Games or Sony. Grand Theft Auto and GTA are trademarks of Take-Two Interactive.</p>
+  </footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
